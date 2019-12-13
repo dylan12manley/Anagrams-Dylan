@@ -11,7 +11,7 @@ class Anagram
   def anagram_finder
     @word_one = @word_one.downcase.split('').sort
     @word_two = @word_two.downcase.split('').sort
-
+    @word_one = @word_one
     if @word_one == @word_two
       @return_statement = "These words are anagrams."
     else
