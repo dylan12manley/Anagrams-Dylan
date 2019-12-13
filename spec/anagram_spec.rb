@@ -6,8 +6,12 @@ describe('#anagram_finder') do
     anagram = Anagram.new("PANTS", "spant")
     expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
   end
-  it('checks if words are words') do
+  it('checks if pfff and fpff are words') do
     anagram = Anagram.new("pfff", "fpff")
     expect(anagram.word_finder()).to(eq("These do not contain vowells, and aren't words."))
+  end
+  it('checks if hi and bye are antigrams') do
+    anagram = Anagram.new("hi", "bye")
+    expect(anagram.antigram_finder()).to(eq("These are antigrams."))
   end
 end

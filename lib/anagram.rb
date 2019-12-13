@@ -37,4 +37,9 @@ class Anagram
     end
     @return_statement
   end
+
+  def antigram_finder
+    @word_one = @word_one.downcase.split('').sort
+    @word_two = @word_two.downcase.split('').sort
+  end
 end
