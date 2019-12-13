@@ -41,5 +41,13 @@ class Anagram
   def antigram_finder
     @word_one = @word_one.downcase.split('').sort
     @word_two = @word_two.downcase.split('').sort
+    @word_one.each do |letter|
+      if @word_two.include?(letter)
+        @return_statement = "These are not antigrams."
+      else
+        @return_statement = "These are antigrams."
+      end
+    end
+    @return_statement
   end
 end
