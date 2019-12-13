@@ -17,8 +17,8 @@
 
 * Clone this repository to desktop
 * Go into the repository directory in the terminal
-* run "gem install bundler" in the terminal
-* run "install gems" in the terminal
+* Run "gem install bundler" in the terminal
+* Run "install gems" in the terminal
 
 
 ### Technologies Used
