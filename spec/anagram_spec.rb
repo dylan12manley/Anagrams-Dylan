@@ -22,8 +22,8 @@ describe('#anagram_finder') do
     anagram = Anagram.new("hi!", "hi")
     expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
   end
-  # it('checks if multiple words are anagrams') do
-  #   anagram = Anagram.new("hi there", "therehi")
-  #   expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
-  # end
+  it('checks if multiple words are anagrams') do
+    anagram = Anagram.new("hi there", "therehi")
+    expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
+  end
 end
