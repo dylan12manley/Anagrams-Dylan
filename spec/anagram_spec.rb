@@ -6,4 +6,9 @@ describe('#anagram_finder') do
     anagram = Anagram.new("PANTS", "spant")
     expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
   end
+  it('checks if words are words') do
+    anagram = Anagram.new("pfff", "fpff")
+    expect(anagram.anagram_finder()).to(eq("These are not word."))
+  end
+
 end
