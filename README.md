@@ -1,38 +1,41 @@
 # Anagrams Program
 
-#### This application
-
 #### By Dylan Manley
 
-## Specifications
+## Specs
 
-__This app checks if two words are anagrams.
-__This app accounts for words that are uppercase and lowercase.
-__This app checks if inputed words contain a vowel.
-__This app checks if words are antigrams.
-__This app checks all the above specs for multiple words._
+|Specs|Input|Output|
+|-|-|-|
+|The program checks if two words are anagrams|"hi", "bye"|"not anagrams"|
+|The program accounts for words that are uppercase and lowercase|"Hi", "ih"|"are anagrams"|
+|The program insures both inputted words contain vowels|"grr", "rgr"|"not words"|
+|The program checks if words are antigrams|"hi", "bye"|"are antigrams"|
+|The program accounts for multiple words and spaces|"hi there", "ihthere"|"are anagrams"|
+|The program accounts for punctuation|"hi there!", "ihthere"|"are anagrams"|
 
+## Setup Instructions
 
-## TDD SPECS
-1. Test should correctly
-
-* FAIL
-* EX INPUT:
-* EX OUTPUT:
-
-* PASS
-* EX INPUT:
-* EX OUTPUT:
+* Clone this repository to desktop
+* Go into the repository directory in the terminal
+* run "gem install bundler" in the terminal
+* run "install gems" in the terminal
 
 
+### Technologies Used
 
-## Setup/Installation Requirements
+__Ruby__
+__RSPEC__
+__PRY__
 
-* Clone portfolio this repository
-* Open with browser of console
+### Known Bugs
 
 
-## Technologies Used
+#### Support and contact details
 
-1. RSPEC
-2. PRY
+_Dylan Manley at dylan.manley@gmail.com_
+
+##### License
+
+*This software is licensed under the MIT license agreement*
+
+Copyright (c) 2019 **_Dylan Manley_**

@@ -2,6 +2,10 @@ require('rspec')
 require('anagram')
 
 describe('#anagram_finder') do
+  it('checks if Pants and pants are anagrams') do
+    anagram = Anagram.new("PANTS", "pants")
+    expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
+  end
   it('checks if Pants and spant are anagrams') do
     anagram = Anagram.new("PANTS", "spant")
     expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
@@ -13,5 +17,9 @@ describe('#anagram_finder') do
   it('checks if hi and bye are antigrams') do
     anagram = Anagram.new("hi", "bye")
     expect(anagram.antigram_finder()).to(eq("These are antigrams."))
+  end
+  it('checks if multiple words are anagrams') do
+    anagram = Anagram.new("hi there", "therehi")
+    expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
   end
 end

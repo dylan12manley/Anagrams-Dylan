@@ -6,12 +6,12 @@ class Anagram
     @word_two = word_two
     @vowels =  ["a", "e", "i", "o", "u", "y"]
     @return_statement = ""
-    @are_words = ""
   end
 
   def anagram_finder
     @word_one = @word_one.downcase.split('').sort
     @word_two = @word_two.downcase.split('').sort
+
     if @word_one == @word_two
       @return_statement = "These words are anagrams."
     else
