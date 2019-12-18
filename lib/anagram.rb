@@ -8,8 +8,8 @@ class Anagram
     @return_statement = ""
 
     def anagram_finder
-      @word_one = @word_one.gsub(/\s/, '').downcase.split('').sort
-      @word_two = @word_two.gsub(/\s/, '').downcase.split('').sort
+      @word_one = @word_one.gsub(/[\s[:punct:]]/, '').downcase.split('').sort
+      @word_two = @word_two.gsub(/[\s[:punct:]]/, '').downcase.split('').sort
       puts @word_one
       puts @word_two
       first_word = @word_one
