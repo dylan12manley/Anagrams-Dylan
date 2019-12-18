@@ -8,8 +8,8 @@ class Anagram
     @return_statement = ""
 
     def anagram_finder
-      @word_one = @word_one.downcase.split('').sort
-      @word_two = @word_two.downcase.split('').sort
+      @word_one = @word_one.gsub(/\s/, '').downcase.split('').sort
+      @word_two = @word_two.gsub(/\s/, '').downcase.split('').sort
       puts @word_one
       puts @word_two
       first_word = @word_one
@@ -17,6 +17,7 @@ class Anagram
       if first_word == seccond_word
         @return_statement = "These words are anagrams."
       else
+        @return_statement = "These words not anagrams."
       end
       @return_statement
     end

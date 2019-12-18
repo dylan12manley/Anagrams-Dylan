@@ -18,12 +18,12 @@ describe('#anagram_finder') do
     anagram = Anagram.new("hi", "bye")
     expect(anagram.antigram_finder()).to(eq("These are antigrams."))
   end
-  it('insures puncuation in words do not affect them being anagrams') do
-    anagram = Anagram.new("hi!", "hi ")
-    expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
-  end
-  # it('checks if multiple words are anagrams') do
-  #   anagram = Anagram.new("hi. ? there! Whatitdotho", "there;hi  tho do it wHat")
+  # it('insures puncuation in words do not affect them being anagrams') do
+  #   anagram = Anagram.new("hi!", "hi ")
   #   expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
   # end
+  it('checks if multiple words are anagrams') do
+    anagram = Anagram.new("hi   there Whatitdotho", "therehi  tho do it wHat")
+    expect(anagram.anagram_finder()).to(eq("These words are anagrams."))
+  end
 end
