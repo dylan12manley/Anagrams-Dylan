@@ -8,30 +8,33 @@ class Anagram
     @return_statement = ""
 
     def anagram_finder
-      @word_one = @word_one.downcase.split('').sort.delete("")
-      @word_two = @word_two.downcase.split('').sort.delete("")
+      @word_one = @word_one.downcase.split('').sort
+      @word_two = @word_two.downcase.split('').sort
+      puts @word_one
+      puts @word_two
       first_word = @word_one
       seccond_word = @word_two
       if first_word == seccond_word
         @return_statement = "These words are anagrams."
       else
-        first_word.each do |letter|
-          if seccond_word.include?(letter)
-            @return_statement = "These words are not anagrams."
-          else
-            @return_statement = "These are antigrams."
-          end
-        end
       end
       @return_statement
     end
   end
-  # word finder
-  # (/W[aeiou]rd/.match(@word_one.to_s)) == true || (/W[aeiou]rd/.match(@word_two.to_s) == true)
-  # if first_word.include?(@vowels) != true || seccond_word.include?(@vowels).include? != true
-  #   @return_statement = "These do not contain vowells, and aren't words."
-  # else
-  # end
+
+  def antigram_finder
+    @word_one = @word_one.downcase.split('').sort
+    @word_two = @word_two.downcase.split('').sort
+    @word_one.each do |letter|
+      if @word_two.include?(letter)
+        @return_statement = "These are not antigrams."
+      else
+        @return_statement = "These are antigrams."
+      end
+    end
+    @return_statement
+  end
+
 
   def word_finder
     @word_one = @word_one.downcase.split('').sort
